@@ -100,3 +100,7 @@ nav{
     background-color: #7cd26a; /* Green fill on hover */
     color: #3a3a3a; /* Dark text on hover */
   }
+
+  .link-container a {
+    width: 100px;
+  }
