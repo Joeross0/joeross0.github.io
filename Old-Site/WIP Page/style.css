@@ -1,8 +1,6 @@
 body{
     margin: 0;
-    background: linear-gradient(135deg, #333333, #385e30);
-    height: 100vh; /* Full viewport height */
-    margin: 0; /* Remove default body margin */
+    background-color: #3a3a3a;
     color: #7cd26a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -27,9 +25,6 @@ nav{
     margin-right: auto;
 
 }
-.title-container > p { 
-    margin: 5px auto;
-}
 .title-container > hr {
     width: 100%;
     height: 4px;
@@ -45,10 +40,6 @@ nav{
     justify-content: center;
     align-items: center;
     height: 100%; /* Adjust as needed */
-}
-
-button{
-
 }
 
 .wip > img {
