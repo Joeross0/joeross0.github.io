@@ -1,0 +1,66 @@
+/* Gear Animations */
+.gears-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height:0px;
+    left: calc(35vw - 175px);
+    top: 0vh;
+    z-index: -1;
+    overflow: visible;
+}
+
+.gear {
+    position: absolute;
+    overflow:hidden;
+}
+
+@keyframes rotate-left {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(370deg);
+    }
+}
+@keyframes rotate-top {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-right {
+    from {
+        transform: rotate(-20deg);
+    }
+    to {
+        transform: rotate(340deg);
+    }
+}
+
+.gear-left {
+    top: 106px; 
+    left: -102px; 
+    transform: scale(0.9); 
+    animation: rotate-left 10s linear infinite; 
+}
+
+.gear-top {
+    top: -10px; 
+    left: 20px; 
+    transform: rotate(50deg);
+    animation: rotate-top 10s linear infinite; 
+    animation-direction: reverse; 
+}
+
+.gear-right {
+    top: 115px;
+    left: 90px; 
+    transform: scale(0.9); 
+    animation: rotate-right 10s linear infinite;
+    animation-direction: reverse;
+}

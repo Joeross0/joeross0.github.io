@@ -1,10 +1,19 @@
-body{
+@import url("buttons.css");
+@import url("gears.css");
+@import url("side-menu.css");
+html{
+    overflow: visible !important;
+}
+body {
     margin: 0;
-    background: linear-gradient(135deg, #3A3A3A, #264121);
+    background: linear-gradient(135deg, #3A3A3A, #406e38);
+    background-attachment: fixed; /* Keeps background in place */
+    background-size: cover; /* Ensures it covers the whole screen */
     height: 100vh; 
-    margin: 0; 
+    width: 100vw;
     color: #7cd26a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 h1{
@@ -12,16 +21,51 @@ h1{
     font-size: xx-large;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    width: 100%;
+    background: linear-gradient(135deg, #3A3A3A, #3c4f38);
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.landing-header {
+    max-width: 90vw;
+    margin: auto;
+    height: 100vh; /* Make header take full viewport height */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    background: none;
+    align-items: center; /* Centers vertically */
+    overflow: none;
+}
+
+@media (max-width: 768px) { /* Adjust for your breakpoint */
+    .side-title {
+        visibility: hidden;
+        position: relative;
+    }
+}
+.title{
+    margin-top: 10px;
+}
 .subtitle, p{
     color: #dba43e;
     margin: 0;
 }
+.side-subtitle{
+    text-align: right;
+}
 nav{
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 .hamburger-menu{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .top-title-container{
     display: flex;
@@ -45,32 +89,21 @@ nav{
     margin-left: 0;
 }
 
-.wip {
-    margin: 20px;
+.img-container {
+    margin: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%; 
 }
 
-button{
-    margin: 10px;
-    text-decoration: none; 
-    font-size: 16px;
-    font-weight: bold;
-    color: #7cd26a; 
-    padding: 8px 12px; 
-    border: 2px solid #7cd26a; 
-    border-radius: 4px; 
-    transition: all 0.3s ease-in-out; 
-    background-color: transparent;
-}
-button:hover{
-    background-color: #7cd26a;
-    color: #3a3a3a;
+.margin-fifty{
+    margin: 50px !important;
 }
 
-.wip > img {
+
+
+.img-container > img, .img-container > svg {
     width: 200px
 }
 
@@ -79,9 +112,7 @@ button:hover{
     border-radius: 4px; 
     background-color: transparent;
     margin: 20px;
-    padding: 10px;
-    text-align: center;
-    width: 70vw;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -100,18 +131,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
 }
-  
-.box a {
-    margin: 10px;
-    text-decoration: none; 
-    font-size: 16px;
-    font-weight: bold;
-    color: #7cd26a; 
-    padding: 8px 12px; 
-    border: 2px solid #7cd26a; 
-    border-radius: 4px; 
-    transition: all 0.3s ease-in-out; 
-}
+
 
 .links{
     padding-bottom: 40px
@@ -125,81 +145,23 @@ button:hover{
     margin-bottom: 40px
 }
 
-.box a:hover {
-    background-color: #7cd26a;
-    color: #3a3a3a;
+
+
+.highlight-green{
+    color:#7cd26a
 }
 
-.link-container a {
-    width: 100px;
+.bold{
+    font-weight: bold;
 }
 
-/* Gear Animations */
-.gears-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 32.5vw;
-    top: 5vh;
-    z-index: -1;
-}
 
-.gear {
-    position: absolute;
-}
 
-/* Add animation for each gear */
-@keyframes rotate-left {
-    from {
-        transform: rotate(10deg);
-    }
-    to {
-        transform: rotate(370deg);
-    }
-}
-@keyframes rotate-top {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes rotate-right {
-    from {
-        transform: rotate(-20deg);
-    }
-    to {
-        transform: rotate(340deg);
-    }
-}
 
-.gear-left {
-    top: 106px; /* Adjust vertical position */
-    left: -102px; /* Adjust horizontal position */
-    transform: scale(0.9); /* Adjust size if necessary */
-    animation: rotate-left 10s linear infinite; /* Adjust speed (6s) for rotation */
-}
-
-.gear-top {
-    top: -10px; /* Adjust vertical position */
-    left: 20px; /* Adjust horizontal position */
-    transform: rotate(50deg);
-    animation: rotate-top 10s linear infinite; /* Adjust speed (4s) for rotation */
-    animation-direction: reverse; /* Rotate in reverse for variation */
-}
-
-.gear-right {
-    top: 115px; /* Adjust vertical position */
-    left: 90px; /* Adjust horizontal position */
-    transform: scale(0.9); /* Adjust size if necessary */
-    animation: rotate-right 10s linear infinite; /* Adjust speed (8s) for rotation */
-    animation-direction: reverse; /* Rotate in reverse for variation */
-}
-
-.Home-gears {
-    transform: scalex(-1);
-    top: 20vh;
-    left: 70vw;
+.body-container{
+    width: 85vw;
+    max-width: 750px;
+    margin: auto;
+    margin-top: 150px;
+    background: transparent
 }
