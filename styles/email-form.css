@@ -1,0 +1,58 @@
+#contact-form textarea,
+#contact-form input{
+    background-color: transparent;
+    color: #dba43e;
+    border: 2px solid #7cd26a; 
+    margin-bottom: 20px;
+    border-radius: 4px; 
+    background-color: transparent;
+    padding: 10px;
+}
+
+.name-email {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    gap: 10px; /* Space between inputs */
+    width: 100%; /* Ensures it spans the full form width */
+}
+
+.name-email input {
+    flex: 1 1 150px; /* Allows growth but maxes out at 150px before wrapping */
+    min-width: 100px; /* Ensures they don’t shrink too small */
+    padding: 8px;
+    border: 2px solid #7cd26a;
+    background-color: transparent;
+    color: #dba43e;
+}
+
+
+
+#contact-form textarea{
+    max-width: calc(100% - 25px);
+    min-width: calc(100% - 25px);
+    min-height: 120px;
+}
+
+/* Change placeholder text color */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: rgba(219, 164, 62, 0.7); /* Adjust opacity for better visibility */
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-style: normal; /* Optional: makes placeholder text italic */
+    font-size: 15px;
+}
+
+.submit-btn-container{
+    display: flex;
+    flex-direction: column; /* Ensures elements stack properly */
+    align-items: flex-end; /* Aligns button to the right */
+}
+
+#contact-form button {
+    margin: 0;
+    margin-left: auto;
+}
+
+.flex-box a {
+    color:#dba43e
+}

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
+
     <title>Joseph Ross</title>
 </head>
 
@@ -39,35 +40,55 @@
         </div>
     </div>
     <div class="body-container">
-        <!-- <center>    
-            <h3>I'm a UI/UX designer crafting intuitive and high-performing digital experiences.</h3>
+        <center>    
+            <h2>Let's team up to create innovative solutions</h2>
             <div class="img-container">
-                <img src="assets/Construction_man.png"> 
+                <img src="assets/Mail.png"> 
             </div>
-            <p class="subtitle">My specialties include crafting seamless UI/UX experiences, designing scalable software architectures, and developing mobile, web, and desktop applications. 
-                I excel in RESTful API design, cloud-based solutions, and even permanent QR code generation—delivering intuitive, high-performance digital products.</p>
-            <h3 class="margin-fifty">Testimonials</h3>
+            <p class="subtitle">Your ideas, my expertise. Together, we'll make it happen.</p>
         </center>
-        <div class="testimonials box margin-fifty">
-            <p>“Joseph contributed innovative ideas and actionable recommendations...” <br>
-                — <span class="highlight-green bold">Brian Dame, Manager at Paperwise</span>
-            </p><br>
+        <div class="email-form margin-fifty">
             
-            <p>
-                “Joseph’s contributions on our Cloud product at Paperwise—improving UI, user experience, and storage efficiency—were outstanding...” <br>
-                — <span class="highlight-green bold">Henry Tran, Dura</span>
-            </p><br>
-
-            <p>
-                “Joseph is a quick learner with a keen eye for front-end work. He proactively identifies issues, values user experience, and brings great ideas to the table.” <br>
-                — <span class="highlight-green bold">Rex Gray, Product Manager at Paperwise</span>
-            </p><br>
-            
-            <p>
-                “...an exceptionally efficient developer, delivering quality features and bug fixes...” <br>
-                — <span class="highlight-green bold">Seth Swango, Coworker at Paperwise</span>
-            </p>
+            <h2 class="box-title">Email Form</h2>
+            <div class="box">
+                <form id="contact-form">
+                    <div id="success-message" style="display: none; padding: 10px; margin-bottom: 10px; color: #dba43e; text-align: center;">
+                        ✅ Message sent successfully!
+                    </div>
+                    <input type="hidden" name="access_key" value="2d82ad95-f914-4b80-92df-6729b1aa25b8">
+                    
+                    <div class="name-email">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                    <div class="submit-btn-container">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
+        <div class="margin-fifty">
+            
+            <h2 class="box-title">Contact Info</h2>
+            <div class="box">
+                <div class="flex-box">
+                    <div class="left">
+                        <p style="margin-bottom: 20px;">Email</p>
+                        <p>Phone</p>
+                    </div>
+                    <div class="right">
+                        <p style="margin-bottom: 20px;"><a href="mailto:20josephross@gmail.com" class="contact-link">20josephross@gmail.com</a></p>
+                        <p><a href="tel:+14173004036" class="contact-link">(417) - 300 - 4036</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="button-list">
             <a href="https://www.upwork.com/freelancers/~01878413bae6eac0a1?mp_source=share" target="_blank">
                 <button class="img-btn"><img src="assets/Upwork button.svg"></button>
@@ -80,7 +101,7 @@
             <a href="https://github.com/Joeross0" target="_blank">
                 <button class="img-btn"><img src="assets/Github button.svg"></button>
             </a>
-        </div> -->
+        </div> 
     </div>
 
     <script src="script.js"></script>

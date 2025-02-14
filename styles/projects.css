@@ -1,0 +1,46 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
+    gap: 10px;
+    width: 100%;
+    max-width: 600px; /* Adjust width as needed */
+    margin: auto;
+}
+
+/* Grid Items */
+.grid-item {
+    /* background-color: #4CAF50; */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    height: min-content;
+}
+
+/* Responsive Design: 1 column on mobile */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+
+.proj-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+} 
+
+.proj-img-container > img{
+    width: 200px
+}
+
+.grid-item h3{
+    margin-top: 0;
+    color: #7cd26a;
+}
+
+.grid-item .description{
+    font-size: 13px;
+}  

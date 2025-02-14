@@ -12,3 +12,26 @@ document.addEventListener("click", function (event) {
         menu.classList.remove("show");
     }
 });
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form from redirecting
+
+    const formData = new FormData(this);
+
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById("success-message").style.display = "block"; // Show success message
+            this.reset(); // Clear form fields after submission
+        } else {
+            alert("Error sending message. Please try again.");
+        }
+    })
+    .catch(error => {
+        alert("An error occurred. Please try again.");
+    });
+});

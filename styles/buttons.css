@@ -7,7 +7,7 @@ button{
     background-color: transparent;
 }
 button:hover{
-    transform: scale(1.1);
+    transform: scale(1.25);
     cursor: pointer;
 }
 
@@ -41,12 +41,14 @@ button:not(.img-btn):not(.side-button):hover{
     margin: 0;
     padding: 0;
     width: 100%;
-    color: #7cd26a
+    color: #7cd26a;
+    transition: all 0.3s ease-in-out;
 }
 
 .side-button:hover{
-    transform: scale(1);
-    border: 3px solid #7cd26a; 
+    transform: scale(1.25);
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 4px; 
     background-color: transparent;
 }
@@ -60,4 +62,12 @@ button:not(.img-btn):not(.side-button):hover{
     align-items: center;
     width: min-content;
     margin: 20px auto;
+}
+
+.button-list button{
+    width: 100px;
+}
+
+.button-list img{
+    margin: auto;
 }
