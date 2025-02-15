@@ -3,6 +3,7 @@
 @import url("side-menu.css");
 @import url("email-form.css");
 @import url("projects.css");
+@import url("about.css");
 html{
     overflow: visible !important;
 }
@@ -106,7 +107,7 @@ nav{
 
 
 
-.img-container > img, .img-container > svg {
+.img-container:not(.headshot) > img, .img-container > svg {
     width: 200px
 }
 
