@@ -3,7 +3,6 @@
     grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
     gap: 10px;
     width: 100%;
-    max-width: 600px; /* Adjust width as needed */
     margin: auto;
 }
 
@@ -23,6 +22,11 @@
     .grid-container {
         grid-template-columns: 1fr; /* Single column on small screens */
     }
+
+    .proj-img-container > img:hover {
+        pointer-events: none; /* Prevents hover effect */
+        transform: none !important; /* Ensures no scaling */
+    }
 }
 
 .proj-img-container{
@@ -32,13 +36,22 @@
     height: 100%; 
 } 
 
-.proj-img-container > img{
-    width: 200px
+.proj-img-container > img {
+    width: 300px;
+    transition: all 0.3s ease-in-out;
 }
 
+.proj-img-container > img:hover {
+    transform: scale(2);
+}
+
+
 .grid-item h3{
-    margin-top: 0;
+    margin: 10px 0;
     color: #7cd26a;
+}
+.grid-item p{
+    margin-bottom: 5px;;
 }
 
 .grid-item .description{
