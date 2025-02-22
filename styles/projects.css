@@ -39,6 +39,7 @@
 .proj-img-container > img {
     width: 300px;
     transition: all 0.3s ease-in-out;
+    border-radius: 9px;
 }
 
 .proj-img-container > img:hover {
